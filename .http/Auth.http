@@ -1,0 +1,17 @@
+### 이메일 중복 조회
+POST https://ybe-mini.site/auth/checkEmail
+Content-Type: application/json
+
+{
+  "email": "test2@test.com"
+}
+
+### 로그인
+POST https://ybe-mini.site/auth/login
+Content-Type: application/json
+Origin: http://localhost:5173
+
+{
+  "email":"jh@test.com",
+  "password":"123456"
+}

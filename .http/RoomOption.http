@@ -1,0 +1,47 @@
+
+### 룸옵션 추가
+POST http://localhost:8080/accommodations/roomoptions
+Content-Type: application/json
+
+{
+  "defaultPrice": 150000,
+  "description": "이 방은 ~~~~이여서 ~~~하며 쾌적한 숙박 경험을 선사합니다.",
+  "checkIn": "15:00:00",
+  "checkOut": "10:00:00",
+  "totalRoomCount": 10,
+  "capacity": 4,
+  "name": "더블 싱글221 - 🥃🍸🍹포함",
+  "accommodationId": 20
+}
+
+###  룸옵션썸네일 업데이트 API
+PATCH http://localhost:8080/accommodations/roomoptions/61/thumbnail
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="thumbnail"; filename="thumbnail.png"
+
+< ../.img/room1.jpeg
+--WebAppBoundary--
+
+### 룸옵션 메인 이미지 업데이트 API
+PATCH http://localhost:8080/accommodations/roomoptions/61/mainImages
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="mainImages"; filename="main_image_1.png"
+
+< ../.img/room2.jpeg
+--WebAppBoundary--
+Content-Disposition: form-data; name="mainImages"; filename="main_image_2.png"
+
+< ../.img/room3.jpeg
+--WebAppBoundary--
+Content-Disposition: form-data; name="mainImages"; filename="main_image_3.png"
+
+< ../.img/room4.jpeg
+--WebAppBoundary--
+Content-Disposition: form-data; name="mainImages"; filename="main_image_4.png"
+
+< ../.img/room5.jpeg
+--WebAppBoundary--

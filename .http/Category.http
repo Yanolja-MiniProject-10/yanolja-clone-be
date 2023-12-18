@@ -1,0 +1,3 @@
+### 카테고리 조회 API
+GET https://ybe-mini.site/category
+Content-Type: application/json

@@ -1,0 +1,27 @@
+### OPEN API 테스트
+GET http://apis.data.go.kr/B551011/KorService1/searchStay1?serviceKey=nqlCoUOebh6V0L1HYGLsIw0Xqm83%2FBL544%2BX9ZKcUBptyMk5lmcmDk7oiiRGOnZCxXOmgcjzVVppa58pSIZZKg%3D%3D&numOfRows=5&pageNo=1&_type=json&MobileOS=ETC&MobileApp=TestApp
+
+### open api 행사 정보 조회
+GET http://apis.data.go.kr/B551011/KorService1/searchFestival1?serviceKey=nqlCoUOebh6V0L1HYGLsIw0Xqm83%2FBL544%2BX9ZKcUBptyMk5lmcmDk7oiiRGOnZCxXOmgcjzVVppa58pSIZZKg%3D%3D&numOfRows=5&pageNo=1&_type=json&MobileOS=ETC&MobileApp=TestApp&listYN=Y&eventStartDate=20170901&areaCode=1&sigunguCode=18
+
+### open api 지역 코드 조회
+GET http://apis.data.go.kr/B551011/KorService1/areaCode1?serviceKey=nqlCoUOebh6V0L1HYGLsIw0Xqm83%2FBL544%2BX9ZKcUBptyMk5lmcmDk7oiiRGOnZCxXOmgcjzVVppa58pSIZZKg%3D%3D&numOfRows=20&pageNo=1&_type=json&MobileOS=ETC&MobileApp=TestApp
+
+### 지역 코드 조회
+GET https://ybe-mini.site/open-api/area-code
+
+### 시군구 코드 조회
+GET https://ybe-mini.site/open-api/sigungu-code?areaCode=1
+
+### 행사 정보 업데이트
+PUT https://ybe-mini.site/open-api/festival-info
+Content-Type: application/json
+
+{
+  "row": "10",
+  "eventStartDate": "20231123",
+  "area": "서울",
+  "sigungu": "중구",
+  "areaCode": "1",
+  "sigunguCode": "24"
+}

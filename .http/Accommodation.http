@@ -1,0 +1,74 @@
+
+### 숙박 상품 생성 API
+POST https://ybe-mini.site/accommodations
+Content-Type: application/json
+
+{
+  "name": "ㅅㅅㅅㅅ 리조트",
+  "description": "~~~~ 좋은 호텔입니다.",
+  "address": "제주도 제주시",
+  "region": "JEJU",
+  "category": "HOTEL_RESORT"
+}
+
+### 숙박 상품 썸네일 업데이트 API
+PATCH https://ybe-mini.site/accommodations/20/thumbnail
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="thumbnail"; filename="thumbnail.png"
+
+< ../.img/thumbnail20.jpeg
+--WebAppBoundary--
+
+### 숙박 상품 메인 이미지 업데이트 API
+PATCH https://ybe-mini.site/accommodations/20/mainImages
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="mainImages"; filename="main_image_1.png"
+
+< ../.img/mainimage16.jpg
+--WebAppBoundary--
+Content-Disposition: form-data; name="mainImages"; filename="main_image_2.png"
+
+< ../.img/mainimage17.jpg
+--WebAppBoundary--
+Content-Disposition: form-data; name="mainImages"; filename="main_image_3.png"
+
+< ../.img/mainimage18.jpg
+--WebAppBoundary--
+Content-Disposition: form-data; name="mainImages"; filename="main_image_4.png"
+
+< ../.img/mainimage19.jpg
+--WebAppBoundary--
+Content-Disposition: form-data; name="mainImages"; filename="main_image_5.png"
+
+< ../.img/mainimage20.jpg
+--WebAppBoundary--
+
+### 숙박 상품 상세 조회 API
+GET https://ybe-mini.site/accommodations/1?startDate=2023-11-30&endDate=2023-12-01&guest=2
+Content-Type: application/json
+
+### 숙박 상품 룸옵션 상세조회 API
+GET https://ybe-mini.site/accommodations/roomOptions/3?startDate=2023-12-23&endDate=2023-12-25&guest=2
+Content-Type: application/json
+
+### 숙박 상품 전체 조회 API
+GET https://ybe-mini.site/accommodations?startDate=2023-11-30&endDate=2023-12-01&guest=2
+Content-Type: application/json
+Origin: http://localhost:5173
+
+### 카테고리별 숙박 상품 조회 API
+GET https://ybe-mini.site/accommodations/category?page=0&size=5&category=펜션_풀빌라&startDate=2023-11-23&endDate=2023-11-25&guest=2
+Content-Type: application/json
+
+### 지역별 상품 조회 API
+GET https://ybe-mini.site/accommodations/region?region=서울&startDate=2023-11-23&endDate=2023-11-25&guest=2
+
+### 추천 상품 조회 API
+GET http://localhost:8080/accommodations/related?category=모텔&region=경기&startDate=2023-11-30&endDate=2023-12-01&guest=2
+
+### 랭킹순 조회 API
+GET https://ybe-mini.site/accommodations/ranking?startDate=2023-11-23&endDate=2023-11-25&guest=2

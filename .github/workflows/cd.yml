@@ -1,0 +1,29 @@
+name: CD
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+permissions:
+  contents: read
+  issues: write
+  checks: write
+  pull-requests: write
+  actions: write
+
+jobs:
+  deploy_was:
+    runs-on: ubuntu-latest
+    steps:
+      - name: was 배포
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: ${{ secrets.WAS_HOST }}
+          username: ubuntu
+          key: ${{ secrets.WAS_PEM_KEY }}
+          port: 22
+          script: |
+            docker pull ${{ secrets.DOCKER_REPO }}/ybe_mini_project
+            bash deploy.sh
