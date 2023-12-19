@@ -12,6 +12,7 @@
 </p>
 
 ```
+배포 링크 : https://yanolja.vercel.app
 Test ID : test@yanolja.com
 Test PW : 00000
 API 문서 링크 : https://ybe-mini.site/swagger-ui/index.html
